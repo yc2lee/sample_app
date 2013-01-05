@@ -10,4 +10,9 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def sandbox 
+    @myvar = 'hello'
+    render :renderme
+  end
 end

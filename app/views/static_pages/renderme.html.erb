@@ -1,0 +1,60 @@
+<div class="hero-unit">
+    <h1>This is the renderme view</h1>
+    <p>The date is <%= time_tag Date.today %></p>
+    <p>
+    <%= link_to "Click me", "#", class: "btn btn-primary btn-large" %>
+        <i class="icon-search"></i> 
+
+    </p>
+</div>
+<h1><%= "The @myvar variable is #{@myvar}" %></h1>
+<p class="lead">
+    Vivamus sagittis lacus vel augue laoreet rutrum faucibus 
+    dolor auctor. Duis mollis, est non commodo luctus.
+</p>
+<% code='(1..200).to_a.join(\' \')' %>
+<%= static_pages_helper %>
+<p> The following is generated with <code><%= code %></code>.</p>
+<%= eval code %>
+
+<p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+<pre>
+&lt;p&gt;Sample text here...&lt;/p&gt;
+</pre>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+
+  </tbody>
+</table>
+
+

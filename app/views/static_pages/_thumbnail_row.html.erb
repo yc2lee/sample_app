@@ -1,0 +1,31 @@
+<% 
+random_text = <<END_OF_STRING
+Cras justo odio, dapibus ac facilisis in, 
+egestas eget quam. Donec id elit non mi porta gravida 
+at eget metus. Nullam id dolor id nibh ultricies 
+vehicula ut id elit.
+END_OF_STRING
+%>
+
+<div class="row-fluid">
+    <ul class="thumbnails">
+        <% @pics.each do |pic| %>
+              <li class="span4">
+                <div class="thumbnail">
+                  <img alt="300x200" 
+                       style="margin-top:10px;width: auto; height: 211px;"
+                       src="<%= path_to_image(pic) %>"/>
+
+                  <div class="caption" style="margin-top:20px;  border-top: 1px solid #000;">
+                    <h3><%= pic.split('.').first.capitalize %></h3>
+                    <p><%= random_text %></p>
+
+                    <p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
+                  </div>
+                </div>
+
+              </li>
+        <% end%>
+    </ul>
+</div>
+

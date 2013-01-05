@@ -1,0 +1,17 @@
+<footer class="footer">
+  <small style="float:left;">
+    <a href="http://railstutorial.org/">Rails Tutorial</a>
+    by Michael Hartl
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to "About",   about_path %></li>
+      <li><%= link_to "Contact", contact_path %></li>
+      <li><a href="http://news.railstutorial.org/">News</a></li>
+    </ul>
+  </nav>
+  <br>
+  <% [about_path, about_url, root_path, root_url]. each do |l| %>
+  <%= l =~ (/\/([^\/]*)$/); $1 unless $1.nil? %>: <small><%= l %></small><br>
+  <% end %>
+</footer>
